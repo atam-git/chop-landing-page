@@ -626,10 +626,218 @@ html, body {
 }
 
 /* ─────────────────────────────────────────────────────
+   EXCLUSIVE BENEFITS SECTION
+   ───────────────────────────────────────────────────── */
+.benefits-section {
+  padding: 96px 24px;
+  background: #fff;
+}
+
+.benefits-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.benefits-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.benefits-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #1b1b1b;
+  margin: 0;
+}
+
+.benefits-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #3f4a3c;
+  margin: 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 33px;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.benefit-icon-box {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: #f0eded;
+  flex-shrink: 0;
+  margin-bottom: 24px;
+}
+
+.benefit-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #1b1b1b;
+  margin: 0 0 8px;
+}
+
+.benefit-card-description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22.75px;
+  color: #3f4a3c;
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────
+   SIMPLE 4-STEP PROCESS SECTION
+   ───────────────────────────────────────────────────── */
+.step-process-section {
+  padding: 96px 24px;
+  background: #f6f3f2;
+}
+
+.step-process-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.step-process-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.step-process-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #1b1b1b;
+  margin: 0;
+}
+
+.step-process-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #3f4a3c;
+  margin: 0;
+}
+
+.step-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  width: 100%;
+}
+
+.step-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.step-column-label {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(0, 110, 33, 0.08);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #006e21;
+}
+
+.step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #006e21;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.step-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #1b1b1b;
+}
+
+/* ─────────────────────────────────────────────────────
    RESPONSIVE DESIGN
    ───────────────────────────────────────────────────── */
 
 @media (max-width: 1024px) {
+  .step-process-section {
+    padding: 72px 24px;
+  }
+
+  .step-process-title {
+    font-size: 30px;
+  }
+
+  .step-columns {
+    gap: 32px;
+  }
+
+  .benefits-section {
+    padding: 72px 24px;
+  }
+
+  .benefits-title {
+    font-size: 30px;
+  }
+
   .countdown-section {
     padding: 64px 32px;
   }
@@ -698,6 +906,41 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .step-process-section {
+    padding: 56px 20px;
+  }
+
+  .step-process-inner {
+    gap: 40px;
+  }
+
+  .step-process-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .step-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .benefits-section {
+    padding: 56px 20px;
+  }
+
+  .benefits-inner {
+    gap: 40px;
+  }
+
+  .benefits-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .countdown-section {
     padding: 56px 24px;
   }
@@ -835,6 +1078,48 @@ html, body {
 }
 
 @media (max-width: 480px) {
+  .step-process-section {
+    padding: 48px 16px;
+  }
+
+  .step-process-inner {
+    gap: 32px;
+  }
+
+  .step-process-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .step-column-label {
+    font-size: 16px;
+  }
+
+  .step-text {
+    font-size: 15px;
+  }
+
+  .benefits-section {
+    padding: 48px 16px;
+  }
+
+  .benefits-inner {
+    gap: 32px;
+  }
+
+  .benefits-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    padding: 24px;
+  }
+
   .countdown-section {
     padding: 48px 16px;
   }
