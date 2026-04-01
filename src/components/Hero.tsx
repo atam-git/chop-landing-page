@@ -61,11 +61,13 @@ export default function Hero(){
               <div className="hero-image-col">
                 <div className="hero-image-card relative">
                   <Image
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/18dca2932de849da092c575984b3b2a7adeedd69?width=1022"
+                    src="/Gradient.png"
                     alt="Nigerian entrepreneur on phone"
                     fill
                     className="hero-photo"
                     priority
+                    quality={100}
+                    unoptimized
                   />
                   {/* Stats overlay */}
                   <div className="stats-overlay">

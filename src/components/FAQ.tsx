@@ -1,24 +1,62 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const faqs = [
   {
-    question: 'Is business confirmation mandatory?',
+    question: 'What is this campaign about?',
     answer:
-      'Business confirmation is not mandatory, but it significantly improves your visibility and credibility on Connect Nigeria. Verified businesses appear higher in search results and earn the trust badge displayed to potential customers.',
+      'A limited-time opportunity to help your business grow by confirming your listing and unlocking exclusive benefits.',
   },
   {
-    question: 'How long does the process take?',
+    question: 'Is it free to list my business?',
     answer:
-      'The confirmation process typically takes 24–48 hours after you submit your documents. In many cases, approvals come through the same day. You\'ll receive a notification once your business is confirmed.',
+      'Yes, creating and confirming your business listing is simple and accessible.',
   },
   {
-    question: "What if my business isn't CAC registered?",
+    question: 'How long does confirmation take?',
     answer:
-      'CAC registration is recommended but not strictly required for all business types. We accept alternative proofs of business operation. Contact our support team to discuss what documents may qualify for your specific situation.',
+      'Confirmation is done in one business day or less.',
+  },
+  {
+    question: 'What happens after I confirm my business?',
+    answer:
+      'Your business becomes more visible, more trusted, and eligible for exclusive offers.',
   },
 ];
+
+function FAQItem({ faq, isOpen, onToggle }: { faq: typeof faqs[0]; isOpen: boolean; onToggle: () => void }) {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(isOpen ? contentRef.current.scrollHeight : 0);
+    }
+  }, [isOpen]);
+
+  return (
+    <div className={`faq-item${isOpen ? ' faq-item--open' : ''}`}>
+      <button className="faq-question-btn" onClick={onToggle} aria-expanded={isOpen}>
+        <span className="faq-question-text">{faq.question}</span>
+        <span className="faq-chevron">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 7.5L10 12.5L15 7.5" stroke="#1B1B1B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      </button>
+      <div 
+        ref={contentRef}
+        className="faq-answer-wrapper"
+        style={{ height: `${height}px` }}
+      >
+        <div className="faq-answer">
+          <p className="faq-answer-text">{faq.answer}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -32,21 +70,12 @@ export default function FAQ() {
 
         <div className="faq-list">
           {faqs.map((faq, i) => (
-            <div key={i} className={`faq-item${openIndex === i ? ' faq-item--open' : ''}`}>
-              <button className="faq-question-btn" onClick={() => toggle(i)} aria-expanded={openIndex === i}>
-                <span className="faq-question-text">{faq.question}</span>
-                <span className="faq-chevron">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#1B1B1B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-              </button>
-              {openIndex === i && (
-                <div className="faq-answer">
-                  <p className="faq-answer-text">{faq.answer}</p>
-                </div>
-              )}
-            </div>
+            <FAQItem
+              key={i}
+              faq={faq}
+              isOpen={openIndex === i}
+              onToggle={() => toggle(i)}
+            />
           ))}
         </div>
       </div>

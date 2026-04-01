@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function BusinessConfirmation() {
   return (
     <section className="business-confirmation-section">
@@ -48,10 +50,14 @@ export default function BusinessConfirmation() {
 
         {/* Right image */}
         <div className="confirmation-image-wrapper">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/47d0a3639cc77cc6c8e4646dd5f8432dba4c70cd?width=1214"
+          <Image
+            src="/Professional Office.png"
             alt="Professional business handshake"
             className="confirmation-image"
+            width={1214}
+            height={527}
+            quality={100}
+            unoptimized
           />
         </div>
 

@@ -20,10 +20,11 @@
 }
 
 html, body {
-  background: #ffffff;
+  background: #FCF9F8;
   color: #1b1b1b;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -31,7 +32,8 @@ html, body {
    ───────────────────────────────────────────────────── */
 .page-wrapper {
   min-height: 100vh;
-  background: #fff;
+  background: #FCF9F8;
+  overflow-x: hidden;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -41,7 +43,7 @@ html, body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #fff;
+  background: #ffffff;
   border-bottom: 1px solid rgba(190, 202, 185, 0.25);
 }
 
@@ -101,7 +103,7 @@ html, body {
    WHO WE ARE SECTION
    ───────────────────────────────────────────────────── */
 .who-we-are-section {
-  background: #f6f3f2;
+  background: #F6F3F2;
   padding: 96px 24px;
 }
 
@@ -138,6 +140,26 @@ html, body {
   line-height: 1.25;
   color: #1b1b1b;
   margin: 0;
+  height: 112px;
+  display: block;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #006e21;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Feature cards grid */
@@ -184,8 +206,8 @@ html, body {
    HERO SECTION
    ───────────────────────────────────────────────────── */
 .hero-section {
-  padding: 80px 48px;
-  background: #fff;
+  padding: 48px 48px 80px;
+  background: #FCF9F8;
 }
 
 .hero-inner {
@@ -214,6 +236,18 @@ html, body {
   background: #ffdea8;
   border-radius: 12px;
   width: fit-content;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 222, 168, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 4px rgba(255, 222, 168, 0);
+  }
 }
 
 .campaign-badge svg {
@@ -279,7 +313,7 @@ html, body {
   text-decoration: none;
   border-radius: 8px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  transition: background 0.2s ease;
+  transition: all 0.3s ease;
   white-space: nowrap;
   border: none;
   cursor: pointer;
@@ -287,6 +321,8 @@ html, body {
 
 .primary-cta-btn:hover {
   background: #8ec138;
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
 .primary-cta-btn svg {
@@ -335,6 +371,31 @@ html, body {
   font-size: 14px;
   font-weight: 500;
   color: #1b1b1b;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.trust-badge:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.trust-badge:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.trust-badge:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .trust-badge svg {
@@ -523,7 +584,7 @@ html, body {
    ───────────────────────────────────────────────────── */
 .business-confirmation-section {
   padding: 24px;
-  background: #fff;
+  background: #F6F3F2;
 }
 
 .business-confirmation-card {
@@ -557,6 +618,18 @@ html, body {
   border-radius: 16px;
   background: rgba(0, 110, 33, 0.10);
   flex-shrink: 0;
+  animation: iconPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 110, 33, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 8px rgba(0, 110, 33, 0);
+  }
 }
 
 .confirmation-heading {
@@ -630,7 +703,7 @@ html, body {
    ───────────────────────────────────────────────────── */
 .benefits-section {
   padding: 96px 24px;
-  background: #fff;
+  background: #F6F3F2;
 }
 
 .benefits-inner {
@@ -639,6 +712,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 64px;
+  background: #F6F3F2;
 }
 
 .benefits-header {
@@ -680,6 +754,19 @@ html, body {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px 0 rgba(0, 110, 33, 0.15);
+  border: 1px solid rgba(163, 213, 72, 0.3);
+}
+
+.benefit-card:hover .benefit-icon-box {
+  background: #a3d548;
+  transform: scale(1.1);
 }
 
 .benefit-icon-box {
@@ -692,6 +779,7 @@ html, body {
   background: #f0eded;
   flex-shrink: 0;
   margin-bottom: 24px;
+  transition: all 0.3s ease;
 }
 
 .benefit-card-title {
@@ -715,7 +803,7 @@ html, body {
    ───────────────────────────────────────────────────── */
 .step-process-section {
   padding: 96px 24px;
-  background: #f6f3f2;
+  background: #F0EDED;
 }
 
 .step-process-inner {
@@ -789,6 +877,18 @@ html, body {
   display: flex;
   align-items: center;
   gap: 20px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInStep 0.6s ease forwards;
+}
+
+.step-item:nth-child(1) { animation-delay: 0.1s; }
+.step-item:nth-child(2) { animation-delay: 0.2s; }
+.step-item:nth-child(3) { animation-delay: 0.3s; }
+.step-item:nth-child(4) { animation-delay: 0.4s; }
+
+.step-item:hover {
+  transform: translateX(4px);
 }
 
 .step-number {
@@ -804,6 +904,22 @@ html, body {
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.step-item:hover .step-number {
+  transform: scale(1.08);
+}
+
+@keyframes fadeInStep {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .step-text {
@@ -818,7 +934,7 @@ html, body {
    ───────────────────────────────────────────────────── */
 .difference-section {
   padding: 96px 24px;
-  background: #fff;
+  background: #F6F3F2;
 }
 
 .difference-inner {
@@ -828,6 +944,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 56px;
+  background: #F6F3F2;
 }
 
 .difference-title {
@@ -855,17 +972,52 @@ html, body {
   flex-direction: column;
   gap: 20px;
   background: #fff;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
-/* Unverified card */
 .diff-card--unverified {
   border: 1.5px dashed rgba(220, 38, 38, 0.25);
   background: #fff;
+  animation: slideInLeft 0.8s ease forwards;
 }
 
-/* Verified card */
+.diff-card--unverified:hover {
+  transform: translateY(-4px) rotate(-1deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
 .diff-card--verified {
   border: 2px solid #006e21;
+  animation: slideInRight 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.diff-card--verified:hover {
+  transform: translateY(-4px) rotate(1deg);
+  box-shadow: 0 12px 28px rgba(0, 110, 33, 0.15);
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Premium badge */
@@ -960,6 +1112,21 @@ html, body {
   color: #006e21;
 }
 
+.diff-trust-badge--good svg {
+  animation: pulseBadge 2s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
 /* Skeleton bars */
 .diff-skeleton-row {
   display: flex;
@@ -1021,7 +1188,7 @@ html, body {
    ───────────────────────────────────────────────────── */
 .ready-docs-section {
   padding: 96px 24px;
-  background: #fff;
+  background: #F6F3F2;
 }
 
 .ready-docs-inner {
@@ -1059,11 +1226,19 @@ html, body {
   gap: 12px;
   padding: 28px 24px;
   border-radius: 16px;
-  background: #f6f3f2;
+  background: #F0EDED;
   flex: 1 1 160px;
   max-width: 220px;
   min-width: 140px;
   text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ready-doc-card:hover {
+  transform: translateY(-6px) !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
 }
 
 .ready-doc-icon {
@@ -1072,6 +1247,11 @@ html, body {
   justify-content: center;
   width: 48px;
   height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.ready-doc-card:hover .ready-doc-icon {
+  transform: scale(1.1) !important;
 }
 
 .ready-doc-label {
@@ -1108,6 +1288,31 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.video-coming-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.coming-soon-badge {
+  padding: 12px 32px;
+  background: #a3d548;
+  color: #00370c;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .video-preview-img {
@@ -1786,7 +1991,7 @@ html, body {
 }
 
 .april-rewards-title {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
@@ -1794,11 +1999,11 @@ html, body {
 }
 
 .april-rewards-not {
-  color: #a3d548;
+  color: #FFDEA8;
 }
 
 .april-rewards-subtitle {
-  font-size: 14px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.55);
   margin: 0;
   line-height: 1.5;
@@ -1809,17 +2014,17 @@ html, body {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 .april-reward-card {
   background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 32px;
+  border-radius: 24px;
+  padding: 56px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 36px;
   position: relative;
   overflow: hidden;
 }
@@ -1827,15 +2032,15 @@ html, body {
 .april-card-content {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   flex: 1;
 }
 
 .april-option-label {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: #a3d548;
+  color: #9DF5BD;
   text-transform: uppercase;
 }
 
@@ -1847,27 +2052,27 @@ html, body {
 }
 
 .april-card-icon--a {
-  font-size: 64px;
+  font-size: 140px;
   color: rgba(163, 213, 72, 0.12);
   font-weight: 900;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  width: 140px;
+  height: 140px;
 }
 
 .april-card-icon--b {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  width: 140px;
+  height: 140px;
 }
 
 .april-card-title {
-  font-size: 22px;
+  font-size: 36px;
   font-weight: 700;
   color: #fff;
   margin: 0;
@@ -1875,7 +2080,7 @@ html, body {
 }
 
 .april-card-desc {
-  font-size: 14px;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.55);
   margin: 0;
   line-height: 1.6;
@@ -1883,19 +2088,41 @@ html, body {
 
 .april-select-btn {
   width: 100%;
-  padding: 14px 24px;
+  padding: 20px 32px;
   background: #fff;
   color: #111;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
 .april-select-btn:hover {
   background: #e8e8e8;
+}
+
+.april-select-btn--coming-soon {
+  background: #f0f0f0;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.april-select-btn--coming-soon:hover {
+  background: #f0f0f0;
+}
+
+.april-card-content--blur,
+.april-card-icon--blur {
+  filter: blur(4px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.april-reward-card--coming-soon {
+  position: relative;
+  opacity: 0.85;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -1912,6 +2139,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  background: #F6F3F2;
 }
 
 .faq-title {
@@ -1973,6 +2201,11 @@ html, body {
   transform: rotate(180deg);
 }
 
+.faq-answer-wrapper {
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .faq-answer {
   padding: 0 24px 20px;
 }
@@ -1988,7 +2221,7 @@ html, body {
    SOCIAL PROOF SECTION
    ───────────────────────────────────────────────────── */
 .social-proof-section {
-  background: #f6f3f2;
+  background: #F0EDED;
   padding: 96px 24px;
 }
 
@@ -1999,6 +2232,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 48px;
+  background: #F0EDED;
 }
 
 .social-proof-title {
@@ -2025,6 +2259,15 @@ html, body {
   flex-direction: column;
   gap: 24px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+  border: 2px solid rgba(163, 213, 72, 0.3) !important;
 }
 
 .testimonial-quote {
@@ -2146,21 +2389,21 @@ html, body {
    ───────────────────────────────────────────────────── */
 .final-cta-section {
   background: #006e21;
-  padding: 80px 32px;
+  padding: 96px 48px;
   text-align: center;
 }
 
 .final-cta-inner {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
 }
 
 .final-cta-title {
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 700;
   color: #fff;
   margin: 0;
@@ -2168,28 +2411,31 @@ html, body {
 }
 
 .final-cta-subtitle {
-  font-size: 16px;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
   line-height: 1.6;
-  max-width: 420px;
+  max-width: 540px;
 }
 
 .final-cta-btn {
   display: inline-block;
-  margin-top: 8px;
-  padding: 16px 32px;
+  margin-top: 12px;
+  padding: 20px 40px;
   background: #fff;
   color: #006e21;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  transition: all 0.3s ease;
 }
 
 .final-cta-btn:hover {
-  background: #f0f0f0;
+  background: #a3d548 !important;
+  color: #00370c !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 20px rgba(163, 213, 72, 0.4) !important;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -2197,25 +2443,25 @@ html, body {
    ───────────────────────────────────────────────────── */
 .contact-support-section {
   background: #faf9f8;
-  padding: 48px 32px;
+  padding: 64px 48px;
 }
 
 .contact-support-inner {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 32px;
 }
 
 .contact-card {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   background: #fff;
   border: 1px solid rgba(190, 202, 185, 0.4);
   border-radius: 16px;
-  padding: 28px 32px;
+  padding: 36px 40px;
   text-decoration: none;
   transition: box-shadow 0.2s, border-color 0.2s;
 }
@@ -2229,8 +2475,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   background: #f0f9f3;
   border-radius: 12px;
   flex-shrink: 0;
@@ -2243,7 +2489,7 @@ html, body {
 }
 
 .contact-label {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2251,7 +2497,7 @@ html, body {
 }
 
 .contact-value {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #1b1b1b;
 }
@@ -2261,7 +2507,7 @@ html, body {
    ───────────────────────────────────────────────────── */
 .site-footer-main {
   background: #18181b;
-  padding: 48px 32px 96px;
+  padding: 48px 32px 32px;
 }
 
 .footer-inner {
@@ -2313,6 +2559,73 @@ html, body {
 }
 
 /* ─────────────────────────────────────────────────────
+   FOOTER CAMPAIGN BANNER
+   ───────────────────────────────────────────────────── */
+.footer-campaign-banner {
+  background: transparent;
+  padding: 16px 24px;
+  z-index: 40;
+}
+
+.footer-campaign-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #006e21;
+  padding: 16px 32px;
+  border-radius: 16px;
+}
+
+.footer-campaign-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-campaign-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-campaign-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.footer-campaign-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #006e21;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer-campaign-btn:hover {
+  background: #f0f0f0;
+}
+
+/* ─────────────────────────────────────────────────────
    FINAL CTA / CONTACT / FOOTER RESPONSIVE
    ───────────────────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -2348,7 +2661,7 @@ html, body {
   }
 
   .site-footer-main {
-    padding: 48px 20px 72px;
+    padding: 48px 20px 32px;
   }
 
   .footer-links {

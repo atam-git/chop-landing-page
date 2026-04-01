@@ -20,7 +20,10 @@ export default function VideoGuide() {
             alt="Business confirmation walkthrough video"
             className="video-preview-img"
           />
-          <button className="video-play-btn" aria-label="Play video">
+          <div className="video-coming-soon-overlay">
+            <span className="coming-soon-badge">Coming Soon</span>
+          </div>
+          <button className="video-play-btn" aria-label="Play video" disabled style={{ opacity: 0.5, cursor: 'not-allowed' }}>
             <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 21V0L16.5 10.5L0 21V21" fill="white" />
             </svg>

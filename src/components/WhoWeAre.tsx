@@ -1,10 +1,56 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
 export default function WhoWeAre(){
-    return( <section className="who-we-are-section">
+    const [displayedText, setDisplayedText] = useState('');
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const sectionRef = useRef<HTMLElement>(null);
+    const fullText = "Nigerian businesses trust our platform for their digital growth.";
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !hasAnimated) {
+              setHasAnimated(true);
+              let index = 0;
+              const interval = setInterval(() => {
+                if (index <= fullText.length) {
+                  setDisplayedText(fullText.slice(0, index));
+                  index++;
+                } else {
+                  clearInterval(interval);
+                }
+              }, 30); // Speed of typing (30ms per character)
+              
+              return () => clearInterval(interval);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+
+      return () => {
+        if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
+        }
+      };
+    }, [hasAnimated]);
+
+    return( <section ref={sectionRef} className="who-we-are-section">
         <div className="who-we-are-inner">
           {/* Left – stat */}
           <div className="stat-col">
             <p className="stat-number">1,200,000+</p>
-            <h2 className="stat-tagline">Nigerian businesses trust our platform for their digital growth.</h2>
+            <h2 className="stat-tagline">
+              {displayedText}
+              <span className="typing-cursor"></span>
+            </h2>
           </div>
 
           {/* Right – feature cards grid */}
