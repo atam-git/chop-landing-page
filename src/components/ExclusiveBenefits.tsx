@@ -66,7 +66,7 @@ export default function ExclusiveBenefits() {
     <section className="benefits-section">
       <div className="benefits-inner">
         <div className="benefits-header">
-          <h2 className="benefits-title">6 Exclusive Benefits for Confirmed Businesses</h2>
+          <h2 className="benefits-title">Exclusive Benefits for Confirmed Businesses</h2>
           <p className="benefits-subtitle">
             Don&apos;t let your listing stay incomplete. Unlock full platform potential.
           </p>
