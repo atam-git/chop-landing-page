@@ -814,6 +814,375 @@ html, body {
 }
 
 /* ─────────────────────────────────────────────────────
+   DIFFERENCE IS CLEAR SECTION
+   ───────────────────────────────────────────────────── */
+.difference-section {
+  padding: 96px 24px;
+  background: #fff;
+}
+
+.difference-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+.difference-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #1b1b1b;
+  margin: 0;
+  text-align: center;
+}
+
+.difference-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Base card */
+.diff-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+}
+
+/* Unverified card */
+.diff-card--unverified {
+  border: 1.5px dashed rgba(220, 38, 38, 0.25);
+  background: #fff;
+}
+
+/* Verified card */
+.diff-card--verified {
+  border: 2px solid #006e21;
+}
+
+/* Premium badge */
+.diff-premium-badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: #006e21;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 0 18px 0 12px;
+}
+
+/* Card header row */
+.diff-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.diff-biz-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Avatar icon box */
+.diff-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diff-avatar--gray {
+  background: #e4e4e7;
+}
+
+.diff-avatar--green {
+  background: rgba(0, 110, 33, 0.1);
+}
+
+.diff-biz-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.diff-biz-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1b1b1b;
+  line-height: 1.4;
+}
+
+.diff-biz-sub {
+  font-size: 13px;
+  font-weight: 400;
+  color: #71717a;
+  line-height: 1.4;
+}
+
+.diff-biz-sub--green {
+  color: #006e21;
+  font-weight: 500;
+}
+
+/* Trust badges */
+.diff-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.diff-trust-badge--bad {
+  color: #dc2626;
+}
+
+.diff-trust-badge--good {
+  color: #006e21;
+}
+
+/* Skeleton bars */
+.diff-skeleton-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diff-skeleton {
+  height: 10px;
+  border-radius: 6px;
+}
+
+.diff-skeleton--long {
+  width: 85%;
+}
+
+.diff-skeleton--mid {
+  width: 65%;
+}
+
+.diff-skeleton--short {
+  width: 50%;
+}
+
+.diff-skeleton--gray {
+  background: #e4e4e7;
+}
+
+.diff-skeleton--green {
+  background: rgba(0, 110, 33, 0.15);
+}
+
+/* Card footer */
+.diff-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.diff-card-footer--bad {
+  background: rgba(220, 38, 38, 0.06);
+  color: #dc2626;
+}
+
+.diff-card-footer--good {
+  background: #006e21;
+  color: #fff;
+}
+
+/* ─────────────────────────────────────────────────────
+   READY YOUR DOCUMENTS SECTION
+   ───────────────────────────────────────────────────── */
+.ready-docs-section {
+  padding: 96px 24px;
+  background: #fff;
+}
+
+.ready-docs-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.ready-docs-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #1b1b1b;
+  margin: 0;
+  text-align: center;
+}
+
+.ready-docs-grid {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ready-doc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px 24px;
+  border-radius: 16px;
+  background: #f6f3f2;
+  flex: 1 1 160px;
+  max-width: 220px;
+  min-width: 140px;
+  text-align: center;
+}
+
+.ready-doc-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.ready-doc-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1b1b1b;
+  line-height: 1.4;
+}
+
+/* ─────────────────────────────────────────────────────
+   VIDEO GUIDE SECTION
+   ───────────────────────────────────────────────────── */
+.video-guide-section {
+  padding: 96px 24px;
+  background: #1b1b1b;
+}
+
+.video-guide-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.video-thumbnail {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #27272a;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-play-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: #006e21;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  padding-left: 4px;
+}
+
+.video-play-btn:hover {
+  background: #005a1a;
+  transform: scale(1.05);
+}
+
+.video-guide-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.video-guide-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #fff;
+  margin: 0;
+}
+
+.video-guide-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+.video-guide-highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15.5px;
+}
+
+.video-guide-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+
+.video-guide-highlight-item svg {
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────────────────
    RESPONSIVE DESIGN
    ───────────────────────────────────────────────────── */
 
@@ -892,6 +1261,26 @@ html, body {
     gap: 32px;
   }
 
+  .ready-docs-section {
+    padding: 72px 24px;
+  }
+
+  .ready-docs-title {
+    font-size: 30px;
+  }
+
+  .video-guide-section {
+    padding: 72px 24px;
+  }
+
+  .video-guide-title {
+    font-size: 30px;
+  }
+
+  .video-guide-inner {
+    gap: 40px;
+  }
+
   .hero-section {
     padding: 64px 32px;
   }
@@ -906,6 +1295,56 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .difference-section {
+    padding: 56px 20px;
+  }
+
+  .difference-title {
+    font-size: 28px;
+  }
+
+  .difference-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .ready-docs-section {
+    padding: 56px 20px;
+  }
+
+  .ready-docs-title {
+    font-size: 26px;
+  }
+
+  .ready-docs-grid {
+    gap: 12px;
+  }
+
+  .ready-doc-card {
+    padding: 20px 16px;
+    min-width: 120px;
+  }
+
+  .video-guide-section {
+    padding: 56px 20px;
+  }
+
+  .video-guide-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .video-guide-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .video-guide-description {
+    font-size: 16px;
+  }
+
   .step-process-section {
     padding: 56px 20px;
   }
@@ -1078,6 +1517,34 @@ html, body {
 }
 
 @media (max-width: 480px) {
+  .ready-docs-section {
+    padding: 48px 16px;
+  }
+
+  .ready-docs-title {
+    font-size: 22px;
+  }
+
+  .ready-doc-card {
+    flex: 1 1 120px;
+    max-width: 48%;
+    padding: 18px 12px;
+  }
+
+  .video-guide-section {
+    padding: 48px 16px;
+  }
+
+  .video-guide-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .video-play-btn {
+    width: 64px;
+    height: 64px;
+  }
+
   .step-process-section {
     padding: 48px 16px;
   }
