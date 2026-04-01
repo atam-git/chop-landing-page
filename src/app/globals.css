@@ -98,6 +98,89 @@ html, body {
 }
 
 /* ─────────────────────────────────────────────────────
+   WHO WE ARE SECTION
+   ───────────────────────────────────────────────────── */
+.who-we-are-section {
+  background: #f6f3f2;
+  padding: 96px 24px;
+}
+
+.who-we-are-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+/* Left stat column */
+.stat-col {
+  flex: 0 0 auto;
+  width: 32%;
+  max-width: 411px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stat-number {
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(0, 110, 33, 0.10);
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.stat-tagline {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1b1b1b;
+  margin: 0;
+}
+
+/* Feature cards grid */
+.feature-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  min-width: 0;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-heading svg {
+  flex-shrink: 0;
+}
+
+.feature-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #006e21;
+}
+
+.feature-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #3f4a3c;
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────
    HERO SECTION
    ───────────────────────────────────────────────────── */
 .hero-section {
@@ -359,6 +442,30 @@ html, body {
     padding: 14px 32px;
   }
 
+  .who-we-are-section {
+    padding: 72px 32px;
+  }
+
+  .who-we-are-inner {
+    gap: 40px;
+  }
+
+  .stat-col {
+    width: 35%;
+  }
+
+  .stat-number {
+    font-size: 72px;
+  }
+
+  .stat-tagline {
+    font-size: 26px;
+  }
+
+  .feature-grid {
+    gap: 32px;
+  }
+
   .hero-section {
     padding: 64px 32px;
   }
@@ -375,6 +482,34 @@ html, body {
 @media (max-width: 768px) {
   .header-inner {
     padding: 12px 20px;
+  }
+
+  .who-we-are-section {
+    padding: 56px 20px;
+  }
+
+  .who-we-are-inner {
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .stat-col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .stat-number {
+    font-size: 64px;
+  }
+
+  .stat-tagline {
+    font-size: 24px;
+  }
+
+  .feature-grid {
+    width: 100%;
+    gap: 32px;
   }
 
   .header-nav {
@@ -435,6 +570,27 @@ html, body {
 @media (max-width: 480px) {
   .header-inner {
     padding: 12px 16px;
+  }
+
+  .who-we-are-section {
+    padding: 48px 16px;
+  }
+
+  .stat-number {
+    font-size: 52px;
+  }
+
+  .stat-tagline {
+    font-size: 22px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .feature-title {
+    font-size: 18px;
   }
 
   .header-nav {
