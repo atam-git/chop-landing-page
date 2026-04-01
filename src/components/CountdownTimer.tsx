@@ -91,7 +91,7 @@ export default function CountdownTimer() {
   return (
     <section className="countdown-section">
       <div className="countdown-inner">
-        <p className="countdown-eyebrow">VERIFICATION WINDOW</p>
+        <p className="countdown-eyebrow">OFFER WINDOW</p>
         <h2 className="countdown-heading">Now.</h2>
 
         <div className="countdown-tiles">

@@ -53,7 +53,7 @@ export default function ReadyDocuments() {
   return (
     <section className="ready-docs-section">
       <div className="ready-docs-inner">
-        <h2 className="ready-docs-title">Ready Your Documents</h2>
+        <h2 className="ready-docs-title">Ready Any of Your Documents</h2>
         <div className="ready-docs-grid">
           {documents.map((doc) => (
             <div key={doc.label} className="ready-doc-card">
