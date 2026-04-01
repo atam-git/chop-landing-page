@@ -7,6 +7,7 @@ import ExclusiveBenefits from "@/components/ExclusiveBenefits";
 import StepProcess from "@/components/StepProcess";
 import ReadyDocuments from "@/components/ReadyDocuments";
 import VideoGuide from "@/components/VideoGuide";
+import DifferenceSection from "@/components/DifferenceSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <StepProcess />
       <ReadyDocuments />
       <VideoGuide />
+      <DifferenceSection />
     </div>
   );
 }

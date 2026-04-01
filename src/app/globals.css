@@ -814,6 +814,209 @@ html, body {
 }
 
 /* ─────────────────────────────────────────────────────
+   DIFFERENCE IS CLEAR SECTION
+   ───────────────────────────────────────────────────── */
+.difference-section {
+  padding: 96px 24px;
+  background: #fff;
+}
+
+.difference-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+.difference-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #1b1b1b;
+  margin: 0;
+  text-align: center;
+}
+
+.difference-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+}
+
+/* Base card */
+.diff-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+}
+
+/* Unverified card */
+.diff-card--unverified {
+  border: 1.5px dashed rgba(220, 38, 38, 0.25);
+  background: #fff;
+}
+
+/* Verified card */
+.diff-card--verified {
+  border: 2px solid #006e21;
+}
+
+/* Premium badge */
+.diff-premium-badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: #006e21;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 0 18px 0 12px;
+}
+
+/* Card header row */
+.diff-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.diff-biz-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Avatar icon box */
+.diff-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diff-avatar--gray {
+  background: #e4e4e7;
+}
+
+.diff-avatar--green {
+  background: rgba(0, 110, 33, 0.1);
+}
+
+.diff-biz-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.diff-biz-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1b1b1b;
+  line-height: 1.4;
+}
+
+.diff-biz-sub {
+  font-size: 13px;
+  font-weight: 400;
+  color: #71717a;
+  line-height: 1.4;
+}
+
+.diff-biz-sub--green {
+  color: #006e21;
+  font-weight: 500;
+}
+
+/* Trust badges */
+.diff-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.diff-trust-badge--bad {
+  color: #dc2626;
+}
+
+.diff-trust-badge--good {
+  color: #006e21;
+}
+
+/* Skeleton bars */
+.diff-skeleton-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diff-skeleton {
+  height: 10px;
+  border-radius: 6px;
+}
+
+.diff-skeleton--long {
+  width: 85%;
+}
+
+.diff-skeleton--mid {
+  width: 65%;
+}
+
+.diff-skeleton--short {
+  width: 50%;
+}
+
+.diff-skeleton--gray {
+  background: #e4e4e7;
+}
+
+.diff-skeleton--green {
+  background: rgba(0, 110, 33, 0.15);
+}
+
+/* Card footer */
+.diff-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.diff-card-footer--bad {
+  background: rgba(220, 38, 38, 0.06);
+  color: #dc2626;
+}
+
+.diff-card-footer--good {
+  background: #006e21;
+  color: #fff;
+}
+
+/* ─────────────────────────────────────────────────────
    READY YOUR DOCUMENTS SECTION
    ───────────────────────────────────────────────────── */
 .ready-docs-section {
@@ -1092,6 +1295,21 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .difference-section {
+    padding: 56px 20px;
+  }
+
+  .difference-title {
+    font-size: 28px;
+  }
+
+  .difference-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
   .ready-docs-section {
     padding: 56px 20px;
   }
