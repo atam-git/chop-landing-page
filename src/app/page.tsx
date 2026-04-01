@@ -12,6 +12,8 @@ import AprilRewards from "@/components/AprilRewards";
 import FAQ from "@/components/FAQ";
 import SocialProof from "@/components/SocialProof";
 import FinalCTA from "@/components/FinalCTA";
+import ContactSupport from "@/components/ContactSupport";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -30,6 +32,8 @@ export default function Home() {
       <FAQ />
       <SocialProof />
       <FinalCTA />
+      <ContactSupport />
+      <Footer />
     </div>
   );
 }
