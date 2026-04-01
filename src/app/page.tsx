@@ -6,7 +6,8 @@ export default function Home() {
   return (
     <div className="page-wrapper">
   <Header/>
-<Hero/>
+      <Hero />
+<WhoWeAre/>
     </div>
   );
 }
