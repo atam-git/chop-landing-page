@@ -33,6 +33,7 @@ html, body {
 .page-wrapper {
   min-height: 100vh;
   background: #FCF9F8;
+  padding-top: 80px;
   overflow-x: hidden;
 }
 
@@ -40,8 +41,10 @@ html, body {
    HEADER
    ───────────────────────────────────────────────────── */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   background: #ffffff;
   border-bottom: 1px solid rgba(190, 202, 185, 0.25);
@@ -513,7 +516,7 @@ html, body {
 }
 
 .countdown-eyebrow {
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
   color: #9af2ba;
