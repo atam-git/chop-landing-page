@@ -11,6 +11,7 @@ import DifferenceSection from "@/components/DifferenceSection";
 import AprilRewards from "@/components/AprilRewards";
 import FAQ from "@/components/FAQ";
 import SocialProof from "@/components/SocialProof";
+import FinalCTA from "@/components/FinalCTA";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <AprilRewards />
       <FAQ />
       <SocialProof />
+      <FinalCTA />
     </div>
   );
 }
