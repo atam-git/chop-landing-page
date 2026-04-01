@@ -94,7 +94,7 @@ export default function Home() {
 
           {/* Right column – image card */}
           <div className="hero-image-col">
-            <div className="hero-image-card">
+            <div className="hero-image-card relative">
               <Image
                 src="https://api.builder.io/api/v1/image/assets/TEMP/18dca2932de849da092c575984b3b2a7adeedd69?width=1022"
                 alt="Nigerian entrepreneur on phone"
