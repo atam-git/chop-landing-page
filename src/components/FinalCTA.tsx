@@ -6,7 +6,7 @@ export default function FinalCTA() {
         <p className="final-cta-subtitle">
           Your customers are searching right now. Ensure they find a business they can trust.
         </p>
-        <a href="#" className="final-cta-btn">Confirm My Business Now</a>
+        <a href="https://www.connectnigeria.com/user-manager/business/my-business?confirmbiz=yes" className="final-cta-btn">Confirm My Business Now</a>
       </div>
     </section>
   );

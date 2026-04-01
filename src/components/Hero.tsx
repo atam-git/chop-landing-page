@@ -25,13 +25,13 @@ export default function Hero(){
     
                 {/* CTA buttons */}
                 <div className="hero-actions">
-                  <a href="#" className="primary-cta-btn">
+                  <a href="https://www.connectnigeria.com/user-manager/business/my-business?confirmbiz=yes" className="primary-cta-btn">
                     Confirm My Business Now
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9V9" fill="#00370C"/>
                     </svg>
                   </a>
-                  <a href="#" className="secondary-cta-btn">Search if listed</a>
+                  <a href="https://www.connectnigeria.com/search" className="secondary-cta-btn">Search if listed</a>
                 </div>
     
                 {/* Trust badges */}

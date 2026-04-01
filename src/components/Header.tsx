@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function ConnectNigeriaLogo() {
   return (
-    <div className="logo-wrapper">
+    <a href="https://www.connectnigeria.com" className="logo-wrapper">
       <Image 
         src="/connectnigerialogo.png" 
         alt="Connect Nigeria" 
@@ -11,7 +11,7 @@ function ConnectNigeriaLogo() {
         quality={100}
         unoptimized
       />
-    </div>
+    </a>
   );
 }
 
@@ -22,8 +22,8 @@ export default function Header(){
         <div className="header-inner">
           <ConnectNigeriaLogo />
           <nav className="header-nav">
-            <a href="#" className="signin-link">Sign In</a>
-            <a href="#" className="header-cta-btn">Confirm My Business</a>
+            <a href="https://www.connectnigeria.com/login" className="signin-link">Sign In</a>
+            <a href="https://www.connectnigeria.com/user-manager/business/my-business?confirmbiz=yes" className="header-cta-btn">Confirm My Business</a>
           </nav>
         </div>
       </header>)

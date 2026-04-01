@@ -28,7 +28,7 @@ export default function AprilRewards() {
                 Get featured on our homepage at half the price for the first 3 months.
               </p>
             </div>
-            <button className="april-select-btn">Select Reward</button>
+            <a href="https://www.connectnigeria.com/user-manager/business/my-business?confirmbiz=yes" className="april-select-btn">Select Reward</a>
           </div>
 
           {/* Option B */}
