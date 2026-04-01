@@ -1,65 +1,130 @@
 import Image from "next/image";
 
+function ConnectNigeriaLogo() {
+  return (
+    <div className="logo-wrapper">
+      <svg width="110" height="36" viewBox="0 0 110 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Circle icon */}
+        <circle cx="9" cy="11" r="8.5" stroke="#2D2D2D" strokeWidth="1" fill="none"/>
+        <circle cx="9" cy="11" r="3" fill="#A3D548"/>
+        <circle cx="9" cy="4" r="1.5" fill="#2D2D2D"/>
+        <circle cx="9" cy="18" r="1.5" fill="#2D2D2D"/>
+        <circle cx="2" cy="11" r="1.5" fill="#2D2D2D"/>
+        <circle cx="16" cy="11" r="1.5" fill="#2D2D2D"/>
+        {/* "connect" text */}
+        <text x="22" y="16" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="14" fontWeight="700" fill="#1B1B1B">connect</text>
+        {/* "NIGERIA.com" text */}
+        <text x="22" y="28" fontFamily="Plus Jakarta Sans, sans-serif" fontSize="9" fontWeight="600" fill="#1B1B1B" letterSpacing="0.5">NIGERIA<tspan fill="#A3D548">.com</tspan></text>
+      </svg>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="page-wrapper">
+      {/* ── HEADER ── */}
+      <header className="site-header">
+        <div className="header-inner">
+          <ConnectNigeriaLogo />
+          <nav className="header-nav">
+            <a href="#" className="signin-link">Sign In</a>
+            <a href="#" className="header-cta-btn">Confirm My Business</a>
+          </nav>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* ── HERO ── */}
+      <section className="hero-section">
+        <div className="hero-inner">
+          {/* Left column */}
+          <div className="hero-content">
+            {/* Campaign badge */}
+            <div className="campaign-badge">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.33333 5.25V4.08333H11.6667V5.25H9.33333V5.25M10.0333 9.33333L8.16667 7.93333L8.86667 7L10.7333 8.4L10.0333 9.33333V9.33333M8.86667 2.33333L8.16667 1.4L10.0333 0L10.7333 0.933333L8.86667 2.33333V2.33333M1.75 8.75V6.41667H1.16667C0.845833 6.41667 0.571181 6.30243 0.342708 6.07396C0.114236 5.84549 0 5.57083 0 5.25V4.08333C0 3.7625 0.114236 3.48785 0.342708 3.25938C0.571181 3.0309 0.845833 2.91667 1.16667 2.91667H3.5L6.41667 1.16667V8.16667L3.5 6.41667H2.91667V8.75H1.75V8.75M7 6.62083V2.7125C7.2625 2.94583 7.47396 3.23021 7.63438 3.56562C7.79479 3.90104 7.875 4.26806 7.875 4.66667C7.875 5.06528 7.79479 5.43229 7.63438 5.76771C7.47396 6.10312 7.2625 6.3875 7 6.62083V6.62083" fill="#271900"/>
+              </svg>
+              <span className="badge-text">Limited Time April Campaign</span>
+            </div>
+
+            {/* Heading */}
+            <h1 className="hero-heading">
+              <span className="heading-dark">Customers Are Searching For You Online. </span>
+              <span className="heading-green">Can They Find You?</span>
+            </h1>
+
+            {/* Description */}
+            <p className="hero-description">
+              Verify your business on Nigeria&apos;s largest directory to gain instant trust, improved search rankings, and exclusive rewards.
+            </p>
+
+            {/* CTA buttons */}
+            <div className="hero-actions">
+              <a href="#" className="primary-cta-btn">
+                Confirm My Business Now
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9V9" fill="#00370C"/>
+                </svg>
+              </a>
+              <a href="#" className="secondary-cta-btn">Search if listed</a>
+            </div>
+
+            {/* Trust badges */}
+            <div className="trust-badges">
+              <div className="trust-badge">
+                <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 9V7.81875C0 7.28125 0.275 6.84375 0.825 6.50625C1.375 6.16875 2.1 6 3 6C3.1625 6 3.31875 6.00313 3.46875 6.00938C3.61875 6.01563 3.7625 6.03125 3.9 6.05625C3.725 6.31875 3.59375 6.59375 3.50625 6.88125C3.41875 7.16875 3.375 7.46875 3.375 7.78125V9H0V9M4.5 9V7.78125C4.5 7.38125 4.60938 7.01562 4.82812 6.68437C5.04688 6.35312 5.35625 6.0625 5.75625 5.8125C6.15625 5.5625 6.63438 5.375 7.19063 5.25C7.74688 5.125 8.35 5.0625 9 5.0625C9.6625 5.0625 10.2719 5.125 10.8281 5.25C11.3844 5.375 11.8625 5.5625 12.2625 5.8125C12.6625 6.0625 12.9687 6.35312 13.1812 6.68437C13.3937 7.01562 13.5 7.38125 13.5 7.78125V9H4.5V9M14.625 9V7.78125C14.625 7.45625 14.5844 7.15 14.5031 6.8625C14.4219 6.575 14.3 6.30625 14.1375 6.05625C14.275 6.03125 14.4156 6.01563 14.5594 6.00938C14.7031 6.00313 14.85 6 15 6C15.9 6 16.625 6.16562 17.175 6.49687C17.725 6.82812 18 7.26875 18 7.81875V9H14.625V9M6.09375 7.5H11.925V7.5C11.8 7.25 11.4531 7.03125 10.8844 6.84375C10.3156 6.65625 9.6875 6.5625 9 6.5625C8.3125 6.5625 7.68437 6.65625 7.11562 6.84375C6.54687 7.03125 6.20625 7.25 6.09375 7.5V7.5V7.5M3 5.25C2.5875 5.25 2.23437 5.10312 1.94062 4.80937C1.64687 4.51562 1.5 4.1625 1.5 3.75C1.5 3.325 1.64687 2.96875 1.94062 2.68125C2.23437 2.39375 2.5875 2.25 3 2.25C3.425 2.25 3.78125 2.39375 4.06875 2.68125C4.35625 2.96875 4.5 3.325 4.5 3.75C4.5 4.1625 4.35625 4.51562 4.06875 4.80937C3.78125 5.10312 3.425 5.25 3 5.25V5.25M15 5.25C14.5875 5.25 14.2344 5.10312 13.9406 4.80937C13.6469 4.51562 13.5 4.1625 13.5 3.75C13.5 3.325 13.6469 2.96875 13.9406 2.68125C14.2344 2.39375 14.5875 2.25 15 2.25C15.425 2.25 15.7813 2.39375 16.0688 2.68125C16.3563 2.96875 16.5 3.325 16.5 3.75C16.5 4.1625 16.3563 4.51562 16.0688 4.80937C15.7813 5.10312 15.425 5.25 15 5.25V5.25M9 4.5C8.375 4.5 7.84375 4.28125 7.40625 3.84375C6.96875 3.40625 6.75 2.875 6.75 2.25C6.75 1.6125 6.96875 1.07813 7.40625 0.646875C7.84375 0.215625 8.375 0 9 0C9.6375 0 10.1719 0.215625 10.6031 0.646875C11.0344 1.07813 11.25 1.6125 11.25 2.25C11.25 2.875 11.0344 3.40625 10.6031 3.84375C10.1719 4.28125 9.6375 4.5 9 4.5V4.5M9 3C9.2125 3 9.39063 2.92812 9.53438 2.78437C9.67813 2.64062 9.75 2.4625 9.75 2.25C9.75 2.0375 9.67813 1.85938 9.53438 1.71563C9.39063 1.57188 9.2125 1.5 9 1.5C8.7875 1.5 8.60937 1.57188 8.46562 1.71563C8.32187 1.85938 8.25 2.0375 8.25 2.25C8.25 2.4625 8.32187 2.64062 8.46562 2.78437C8.60937 2.92812 8.7875 3 9 3V3" fill="#006E21"/>
+                </svg>
+                <span>1.2M+ Businesses</span>
+              </div>
+              <div className="trust-badge">
+                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.9125 12.15L8.79375 7.5H5.79375L6.3375 3.24375L2.86875 8.25H5.475L4.9125 12.15V12.15M3 15L3.75 9.75H0L6.75 0H8.25L7.5 6H12L4.5 15H3V15" fill="#006E21"/>
+                </svg>
+                <span>1-day confirmation</span>
+              </div>
+              <div className="trust-badge">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.55 9.1875L9.1875 14.55C9.0375 14.7 8.86875 14.8125 8.68125 14.8875C8.49375 14.9625 8.30625 15 8.11875 15C7.93125 15 7.74375 14.9625 7.55625 14.8875C7.36875 14.8125 7.2 14.7 7.05 14.55L0.43125 7.93125C0.29375 7.79375 0.1875 7.63438 0.1125 7.45312C0.0375 7.27187 0 7.08125 0 6.88125V1.5C0 1.0875 0.146875 0.734375 0.440625 0.440625C0.734375 0.146875 1.0875 0 1.5 0H6.88125C7.08125 0 7.275 0.040625 7.4625 0.121875C7.65 0.203125 7.8125 0.3125 7.95 0.45L14.55 7.06875C14.7 7.21875 14.8094 7.3875 14.8781 7.575C14.9469 7.7625 14.9812 7.95 14.9812 8.1375C14.9812 8.325 14.9469 8.50938 14.8781 8.69063C14.8094 8.87188 14.7 9.0375 14.55 9.1875V9.1875M8.11875 13.5L13.4812 8.1375L6.8625 1.5H1.5V6.8625L8.11875 13.5V13.5M3.375 4.5C3.6875 4.5 3.95312 4.39062 4.17188 4.17188C4.39062 3.95312 4.5 3.6875 4.5 3.375C4.5 3.0625 4.39062 2.79688 4.17188 2.57812C3.95312 2.35938 3.6875 2.25 3.375 2.25C3.0625 2.25 2.79688 2.35938 2.57812 2.57812C2.35938 2.79688 2.25 3.0625 2.25 3.375C2.25 3.6875 2.35938 3.95312 2.57812 4.17188C2.79688 4.39062 3.0625 4.5 3.375 4.5V4.5" fill="#006E21"/>
+                </svg>
+                <span>Free to list</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right column – image card */}
+          <div className="hero-image-col">
+            <div className="hero-image-card relative">
+              <Image
+                src="https://api.builder.io/api/v1/image/assets/TEMP/18dca2932de849da092c575984b3b2a7adeedd69?width=1022"
+                alt="Nigerian entrepreneur on phone"
+                fill
+                className="hero-photo"
+                priority
+              />
+              {/* Stats overlay */}
+              <div className="stats-overlay">
+                <div className="stats-icon-box">
+                  <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.4 12L0 10.6L7.4 3.15L11.4 7.15L16.6 2H14V0H20V6H18V3.4L11.4 10L7.4 6L1.4 12V12" fill="#00370C"/>
+                  </svg>
+                </div>
+                <div className="stats-text">
+                  <span className="stats-number">+85%</span>
+                  <span className="stats-label">More profile visibility for confirmed businesses</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Verified badge – top right corner */}
+            <div className="verified-badge">
+              <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.4 31.5L8.55 26.7L3.15 25.5L3.675 19.95L0 15.75L3.675 11.55L3.15 6L8.55 4.8L11.4 0L16.5 2.175L21.6 0L24.45 4.8L29.85 6L29.325 11.55L33 15.75L29.325 19.95L29.85 25.5L24.45 26.7L21.6 31.5L16.5 29.325L11.4 31.5V31.5M12.675 27.675L16.5 26.025L20.4 27.675L22.5 24.075L26.625 23.1L26.25 18.9L29.025 15.75L26.25 12.525L26.625 8.325L22.5 7.425L20.325 3.825L16.5 5.475L12.6 3.825L10.5 7.425L6.375 8.325L6.75 12.525L3.975 15.75L6.75 18.9L6.375 23.175L10.5 24.075L12.675 27.675V27.675M14.925 21.075L23.4 12.6L21.3 10.425L14.925 16.8L11.7 13.65L9.6 15.75L14.925 21.075V21.075" fill="#0E7144"/>
+              </svg>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
     </div>
   );
 }
