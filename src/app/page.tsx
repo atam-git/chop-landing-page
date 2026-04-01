@@ -8,6 +8,9 @@ import StepProcess from "@/components/StepProcess";
 import ReadyDocuments from "@/components/ReadyDocuments";
 import VideoGuide from "@/components/VideoGuide";
 import DifferenceSection from "@/components/DifferenceSection";
+import AprilRewards from "@/components/AprilRewards";
+import FAQ from "@/components/FAQ";
+import SocialProof from "@/components/SocialProof";
 
 export default function Home() {
   return (
@@ -22,6 +25,9 @@ export default function Home() {
       <ReadyDocuments />
       <VideoGuide />
       <DifferenceSection />
+      <AprilRewards />
+      <FAQ />
+      <SocialProof />
     </div>
   );
 }
