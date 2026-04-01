@@ -28,7 +28,7 @@ export default function Footer() {
           <a href="https://www.connectnigeria.com/about-us/contact-us" className="footer-link">Contact Support</a>
         </nav>
         <div className="footer-copyright-wrap">
-          <p className="footer-copyright">© 2024 Connect Nigeria. Empowering African Business.</p>
+          <p className="footer-copyright">© 2026 Connect Nigeria. Empowering African Business.</p>
         </div>
       </div>
       
