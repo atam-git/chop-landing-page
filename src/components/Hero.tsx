@@ -31,7 +31,7 @@ export default function Hero(){
                       <path d="M12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16L6.575 14.6L12.175 9V9" fill="#00370C"/>
                     </svg>
                   </a>
-                  <a href="https://www.connectnigeria.com/search" className="secondary-cta-btn">Search if listed</a>
+                  <a href="https://www.connectnigeria.com/search?confirmbiz=yes" className="secondary-cta-btn">Search if listed</a>
                 </div>
     
                 {/* Trust badges */}
